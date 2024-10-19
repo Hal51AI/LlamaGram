@@ -109,9 +109,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.hal51.android'
+    namespace 'com.hal51.llamagram'
     defaultConfig {
-        applicationId 'com.hal51.android'
+        applicationId 'com.hal51.llamagram'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "LemurGram",
+    "name": "LlamaGram",
     "slug": "drogon",
     "version": "1.0.0",
     "orientation": "landscape",
@@ -17,7 +17,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.hal51.ios"
+      "bundleIdentifier": "com.hal51.llamagram"
     },
     "android": {
       
@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.hal51.android"
+      "package": "com.hal51.llamagram"
     },
     "web": {
       "bundler": "metro",

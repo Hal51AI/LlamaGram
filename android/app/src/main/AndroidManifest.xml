@@ -33,7 +33,7 @@
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="myapp"/>
-        <data android:scheme="com.hal51.android"/>
+        <data android:scheme="com.hal51.llamagram"/>
         <data android:scheme="exp+drogon"/>
       </intent-filter>
     </activity>

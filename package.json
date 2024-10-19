@@ -39,6 +39,7 @@
     "expo-three": "^7.0.0",
     "expo-three-orbitcontrols": "https://github.com/foufrix/expo-three-orbit-controls",
     "expo-web-browser": "~13.0.3",
+    "groq-sdk": "^0.7.0",
     "r3f-native-orbitcontrols": "^1.0.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",

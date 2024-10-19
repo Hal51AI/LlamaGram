@@ -1,4 +1,4 @@
-package com.hal51.android
+package com.hal51.llamagram
 
 import android.app.Application
 import android.content.res.Configuration

@@ -1,4 +1,4 @@
-package com.hal51.android
+package com.hal51.llamagram
 
 import android.os.Build
 import android.os.Bundle
