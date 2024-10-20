@@ -105,7 +105,6 @@ Set Groq Key in LlamaGram/app/services/GroqService.ts (line 5)
 
 ## Project Structure
 
-    ```bash
     ├── .expo               # Expo configuration files
     ├── .idea               # IDE settings (for JetBrains IDEs)
     ├── .vscode             # VS Code settings and configuration
@@ -133,7 +132,6 @@ Set Groq Key in LlamaGram/app/services/GroqService.ts (line 5)
     ├── tsconfig.json       # TypeScript configuration
     ├── yarn.lock           # Yarn lockfile for dependency management
     └── README.md           # Project documentation
-    ```
 
 ## Tech Stack
 
