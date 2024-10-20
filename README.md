@@ -135,8 +135,9 @@ Set Groq Key in LlamaGram/app/services/GroqService.ts (line 5)
 
 ## Tech Stack
 
+- **Backend**: Python (https://objaverse-api.hal51.ai/docs#/similarity/glb_similarity_glb_get)
 - **App**: React Native (Expo)
-- **LLM**: Llama 3.1 (70B) via Groq Inference
+- **LLM**: Llama 3.1 (70B) via Groq Inference (Services -> GroqService)
 - **3D Models**: NIH3D, HRA 3D Reference Object Library
 - **3D Rendering**: React Three Fiber
 - **Text-to-Speech**: Open-source TTS libraries
