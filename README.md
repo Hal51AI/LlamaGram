@@ -2,7 +2,7 @@
 
 LlamaGram is an open-source educational tool designed to bring 3D holographic models into classrooms, breaking down spatial ability barriers (SAB) for students. This project combines the power of LLMs, 3D holographic technology, and open-source 3D science models to create an interactive teacher avatar that explains complex scientific concepts in real-time.
 
-#### [Demo APP](https://drive.google.com/file/d/1NIrYcJn5Ly_EsVQm-wn0kmn7yj0MmtHE/view?usp=sharing)
+Try out our app: **[Demo](https://drive.google.com/file/d/1NIrYcJn5Ly_EsVQm-wn0kmn7yj0MmtHE/view?usp=sharing)**
 
 ## Table of Contents
 
