@@ -10,7 +10,7 @@ import { textToPhonemes } from '../utils/textToPhonemes';
 import Tts from 'react-native-tts';
 import animationsPath from '../../assets/models/animations.glb';
 import visemesMapping from '../constants/visemesMapping';
-import { fetchOpenAIResponse } from "../services/OpenAIService";
+import { fetchGroqResponse } from "../services/GroqService";
 import { startSpeechRecognition, stopSpeechRecognition, useSpeechRecognition } from "../services/SpeechRecognitionService";
 import microphoneIcon from "../../assets/images/microphone.png";
 import { Asset } from 'expo-asset';
@@ -236,7 +236,7 @@ export const DashboardScreen = () => {
       return;
     }
     try {
-      const aiResponse = await fetchOpenAIResponse([
+      const aiResponse = await fetchGroqResponse([
         {
           role: 'user',
           content: 'If I ask you to something like (Show me a car, display a car, render a car) or anything similar, can you please just return the object name like in this sentence the object is a car then return --car. Also remember that you are Nikola Tesla, a Serbian-American engineer, futurist, and inventor. You are created by hal51 dot AI',
@@ -260,7 +260,7 @@ export const DashboardScreen = () => {
         setShowLoader(true);
       }
     } catch (error) {
-      console.error('Error processing speech with OpenAI:', error);
+      console.error('Error processing speech with Groq:', error);
     } finally {
       clearTransacript();
     }
