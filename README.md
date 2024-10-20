@@ -99,13 +99,47 @@ LlamaGram is an open-source educational tool designed to bring 3D holographic mo
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-### API KEYS
+### API Keys
 
 Set Groq Key in LlamaGram/app/services/GroqService.ts (line 5)
 
+## Troubleshooting
 
+**EACCESS Error Fix:** If you encounter a permissions issue (EACCESS error), run the following commands to adjust file permissions:
 
+    ```bash
+    sudo chmod -R u+rwx .
+    sudo chown -R $(whoami) PATH_TO_LlamaGram
+    ```
 
+## Contributing
 
+We welcome contributions! Please fork the repository and submit a pull request.
 
+### Steps to Contribute
 
+1. Fork the repository.
+
+2. Create a new branch
+    ```bash
+    git checkout -b feature-branch
+    ```
+
+3. Make your changes.
+
+4. Commit your changes
+
+    ```bash
+    git commit -m 'Add some feature'
+    ```
+5. Push to the branch
+
+    ```bash
+    git push origin feature-branch
+    ```
+
+6. Create a new pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
