@@ -2,6 +2,8 @@
 
 LlamaGram is an open-source educational tool designed to bring 3D holographic models into classrooms, breaking down spatial ability barriers (SAB) for students. This project combines the power of LLMs, 3D holographic technology, and open-source 3D science models to create an interactive teacher avatar that explains complex scientific concepts in real-time.
 
+Try out our app: **[Demo](https://drive.google.com/file/d/1NIrYcJn5Ly_EsVQm-wn0kmn7yj0MmtHE/view?usp=sharing)**
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -115,7 +117,7 @@ Set Groq Key in LlamaGram/app/services/GroqService.ts (line 5)
     │   ├── screens         # App screens/views
     │   ├── services        # API calls and backend services
     │   └── utils           # Utility functions and helpers
-    ├── assets              # Static assets (images, fonts, etc.)
+    ├── assets              # Static assets (avatar, images, fonts, etc.)
     ├── constants           # Additional global constants
     ├── hooks               # Custom React hooks
     ├── ios                 # iOS-specific code and settings
@@ -135,8 +137,10 @@ Set Groq Key in LlamaGram/app/services/GroqService.ts (line 5)
 
 ## Tech Stack
 
+- **Backend**: Python [Objaverse](https://objaverse-api.hal51.ai/docs#/similarity/glb_similarity_glb_get)
 - **App**: React Native (Expo)
-- **LLM**: Llama 3.1 (70B) via Groq Inference
+- **LLM**: Llama 3.1 (70B) via Groq Inference (App/Services -> GroqService)
+- **Avatar**: [ReadyPlayerMe](https://readyplayer.me/)
 - **3D Models**: NIH3D, HRA 3D Reference Object Library
 - **3D Rendering**: React Three Fiber
 - **Text-to-Speech**: Open-source TTS libraries
