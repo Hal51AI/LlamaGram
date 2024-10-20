@@ -205,7 +205,7 @@ export const DashboardScreen = () => {
         }
       })
       console.log("HRE");
-      Tts.setDefaultVoice("en-us-x-iol-local");
+      Tts.setDefaultVoice("en-us-x-sfg-local");
     }
   }
 
