@@ -137,7 +137,7 @@ Set Groq Key in LlamaGram/app/services/GroqService.ts (line 5)
 
 ## Tech Stack
 
-- **Backend**: Python [ObjaverseSemanticSearch]([https://objaverse-api.hal51.ai/docs#/similarity/glb_similarity_glb_get](https://github.com/Hal51AI/ObjaverseSemanticSearch))
+- **Backend**: Python [ObjaverseSemanticSearch](https://github.com/Hal51AI/ObjaverseSemanticSearch)
 - **App**: React Native (Expo)
 - **LLM**: Llama 3.1 (70B) via Groq Inference (App/Services -> GroqService)
 - **Avatar**: [ReadyPlayerMe](https://readyplayer.me/)
