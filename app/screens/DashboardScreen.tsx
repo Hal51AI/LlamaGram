@@ -4,13 +4,13 @@ import React, { Suspense, useState, useEffect, useRef } from 'react';
 import { Platform, StatusBar, View, Pressable, Image } from 'react-native';
 import { useFrame, Canvas } from '@react-three/fiber/native';
 import { useGLTF, Environment, useAnimations } from '@react-three/drei/native';
-import avatarPath from '../../assets/models/tesla.glb';
+import avatarPath from '../../assets/models/mariecurie.glb';
 import { MathUtils } from 'three';
 import { textToPhonemes } from '../utils/textToPhonemes';
 import Tts from 'react-native-tts';
 import animationsPath from '../../assets/models/animations.glb';
 import visemesMapping from '../constants/visemesMapping';
-import { fetchGroqResponse } from "../services/GroqService";
+import { fetchOpenAIResponse } from "../services/OpenAIService";
 import { startSpeechRecognition, stopSpeechRecognition, useSpeechRecognition } from "../services/SpeechRecognitionService";
 import microphoneIcon from "../../assets/images/microphone.png";
 import { Asset } from 'expo-asset';
@@ -21,7 +21,7 @@ import axios from 'axios';
 let currentPhoneme = "";
 function Model({ url, animationsUrl, animation, ...rest }) {
   const preloadAssets = async () => {
-    await Asset.loadAsync(require('../../assets/models/tesla.glb'));
+    await Asset.loadAsync(require('../../assets/models/mariecurie.glb'));
   };
   useEffect(() => {
     preloadAssets();
@@ -29,7 +29,7 @@ function Model({ url, animationsUrl, animation, ...rest }) {
 
   const group = useRef<any>();
 
-  const { scene } = useGLTF(require('../../assets/models/tesla.glb'));
+  const { scene } = useGLTF(require('../../assets/models/mariecurie.glb'));
 
   const blinkInfluenceRef = useRef(0);
   const blinkDirectionRef = useRef(1);
@@ -236,10 +236,10 @@ export const DashboardScreen = () => {
       return;
     }
     try {
-      const aiResponse = await fetchGroqResponse([
+      const aiResponse = await fetchOpenAIResponse([
         {
           role: 'user',
-          content: 'If I ask you to something like (Show me a car, display a car, render a car) or anything similar, can you please just return the object name like in this sentence the object is a car then return --car. Also remember that you are Nikola Tesla, a Serbian-American engineer, futurist, and inventor. You are created by hal51 dot AI',
+          content: 'If I ask you to something like (Show me a car, display a car, render a car) or anything similar, can you please just return the object name like in this sentence the object is a car then return --car. Also remember that you are Marie Curie, a Polish and naturalised-French physicist and chemist. You are created by hal51 dot AI',
         },
         {
           role: 'assistant',
@@ -260,7 +260,7 @@ export const DashboardScreen = () => {
         setShowLoader(true);
       }
     } catch (error) {
-      console.error('Error processing speech with Groq:', error);
+      console.error('Error processing speech with OpenAI:', error);
     } finally {
       clearTransacript();
     }

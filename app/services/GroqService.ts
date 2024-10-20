@@ -2,7 +2,7 @@ import Groq from 'groq-sdk';
 
 // Initialize Groq client
 const client = new Groq({
-  apiKey: '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', // Make sure to set the GROQ_API_KEY in your environment variables
+  apiKey: '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', // Make sure to set the GROQ_API_KEY in your environment variables
 });
 
 // Function to fetch AI response
