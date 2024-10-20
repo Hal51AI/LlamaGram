@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, Image, StatusBar, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Audio } from 'expo-av';  // Use expo-av for microphone permissions
+import { Audio } from "expo-av"; // Use expo-av for microphone permissions
 import splashIcon from "../../assets/images/splash_icon.png";
 
 export const SplashScreen = () => {
@@ -11,46 +11,42 @@ export const SplashScreen = () => {
   useEffect(() => {
     StatusBar.setHidden(true, "none");
 
-    // Check microphone permission with delay
     const checkMicrophonePermission = async () => {
-      const { granted } = await Audio.requestPermissionsAsync();  // Use Audio for permission
-      
-      if (granted) {
-        setPermissionGranted(true);
-      } else {
-        Alert.alert("Permission required", "Microphone access is required to use this app.");
+      try {
+        const { granted } = await Audio.requestPermissionsAsync(); // Use Audio for permission
+
+        if (granted) {
+          setPermissionGranted(true);
+          navigation.replace("DashboardStack");
+        } else {
+          Alert.alert(
+            "Permission required",
+            "Microphone access is required to use this app."
+          );
+        }
+      } catch (error) {
+        console.error("Permission check failed", error);
       }
     };
 
     // Add delay before checking permission and navigating
     const splashTimeout = setTimeout(() => {
-      checkMicrophonePermission().then(() => {
-        if (permissionGranted) {
-          navigation.replace("DashboardStack");
-        }
-      });
+      checkMicrophonePermission();
     }, 3000);
 
     return () => clearTimeout(splashTimeout);
-  }, [navigation, permissionGranted]);
+  }, [navigation]);
 
   return (
     <View
       style={{
-        height: "100%",
-        width: "100%",
+        flex: 1,
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#000",
       }}
     >
-      <View
-        style={{
-          alignSelf: "center",
-          alignItems: "center",
-          alignContent: "center",
-        }}
-      >
+      <View style={{ alignItems: "center" }}>
         <Image
           source={splashIcon}
           style={{ height: 100, width: 100, resizeMode: "contain" }}
@@ -60,7 +56,6 @@ export const SplashScreen = () => {
             color: "#FFF",
             fontSize: 32,
             fontWeight: "400",
-            alignSelf: "center",
             marginTop: 24,
           }}
         >
