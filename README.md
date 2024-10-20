@@ -115,7 +115,7 @@ Set Groq Key in LlamaGram/app/services/GroqService.ts (line 5)
     │   ├── screens         # App screens/views
     │   ├── services        # API calls and backend services
     │   └── utils           # Utility functions and helpers
-    ├── assets              # Static assets (images, fonts, etc.)
+    ├── assets              # Static assets (avatar, images, fonts, etc.)
     ├── constants           # Additional global constants
     ├── hooks               # Custom React hooks
     ├── ios                 # iOS-specific code and settings
