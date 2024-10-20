@@ -103,6 +103,48 @@ LlamaGram is an open-source educational tool designed to bring 3D holographic mo
 
 Set Groq Key in LlamaGram/app/services/GroqService.ts (line 5)
 
+## Project Structure
+
+    ```bash
+    ├── .expo               # Expo configuration files
+    ├── .idea               # IDE settings (for JetBrains IDEs)
+    ├── .vscode             # VS Code settings and configuration
+    ├── android             # Android-specific code and settings
+    ├── app                 # Main app logic
+    │   ├── constants       # Global constants for the app
+    │   ├── navigation      # Navigation-related code (React Navigation)
+    │   ├── screens         # App screens/views
+    │   ├── services        # API calls and backend services
+    │   └── utils           # Utility functions and helpers
+    ├── assets              # Static assets (images, fonts, etc.)
+    ├── constants           # Additional global constants
+    ├── hooks               # Custom React hooks
+    ├── ios                 # iOS-specific code and settings
+    ├── node_modules        # Project dependencies
+    ├── scripts             # Custom scripts for project automation
+    ├── .gitignore          # Git ignored files
+    ├── app.json            # App configuration
+    ├── App.tsx             # Main App entry component (TypeScript)
+    ├── babel.config.js     # Babel configuration
+    ├── expo-env.d.ts       # TypeScript types for Expo environment
+    ├── index.tsx           # Main entry point for the app
+    ├── metro.config.js     # Metro bundler configuration
+    ├── package.json        # Project dependencies and scripts
+    ├── tsconfig.json       # TypeScript configuration
+    ├── yarn.lock           # Yarn lockfile for dependency management
+    └── README.md           # Project documentation
+    ```
+
+## Tech Stack
+
+- **App**: React Native (Expo)
+- **LLM**: Llama 3.1 (70B) via Groq Inference
+- **3D Models**: NIH3D, HRA 3D Reference Object Library
+- **3D Rendering**: React Three Fiber
+- **Text-to-Speech**: Open-source TTS libraries
+- **Speech-to-Text**: Open-source STT libraries
+- **Holographic Hardware**: LemurBox
+
 ## Troubleshooting
 
 **EACCESS Error Fix:** If you encounter a permissions issue (EACCESS error), run the following commands to adjust file permissions:
