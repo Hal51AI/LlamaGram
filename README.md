@@ -138,13 +138,14 @@ Set Groq Key in LlamaGram/app/services/GroqService.ts (line 5)
 ## Tech Stack
 
 - **App**: React Native (Expo)
+- **Backend**: [Open-source Objaverse Semantic Search](https://github.com/Hal51AI/ObjaverseSemanticSearch)
 - **LLM**: Llama 3.1 (70B) via Groq Inference (App/Services -> GroqService)
 - **Avatar**: [ReadyPlayerMe](https://readyplayer.me/)
-- **3D Models**: NIH3D, HRA 3D Reference Object Library
-- **3D Rendering**: React Three Fiber
-- **Text-to-Speech**: Open-source TTS libraries
-- **Speech-to-Text**: Open-source STT libraries
-- **Holographic Hardware**: LemurBox
+- **3D Models**: Open-source NIH3D, HRA 3D Reference Object Library
+- **3D Rendering**: [Open-source Three.JS](https://github.com/Hal51AI/three-gltf-viewer)
+- **Text-to-Speech**: Open-source Native TTS libraries
+- **Speech-to-Text**: Open-source Native STT libraries
+- **Holographic Hardware**: [Open-source DIY KIT - LemurBox](https://d3b22vktv1fs1m.cloudfront.net/assets/stl_files.zip)
 
 ## Troubleshooting
 
